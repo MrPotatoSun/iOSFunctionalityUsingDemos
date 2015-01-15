@@ -19,6 +19,15 @@
 		C4BD1FC41A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
 		C4BD1FCC1A67B3BD00B1C242 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4BD1FCA1A67B3BD00B1C242 /* InfoPlist.strings */; };
 		C4BD1FCE1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BD1FCD1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m */; };
+		C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EF61A67B41A00823AC5 /* BaseViewController.m */; };
+		C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EFA1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m */; };
+		C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */; };
+		C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EFD1A67B41A00823AC5 /* MyView.m */; };
+		C4FE0F0C1A67B41A00823AC5 /* UIDynamicRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */; };
+		C4FE0F0D1A67B41A00823AC5 /* UIDynamicRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */; };
+		C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F031A67B41A00823AC5 /* Menu.m */; };
+		C4FE0F0F1A67B41A00823AC5 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0F041A67B41A00823AC5 /* Menu.xib */; };
+		C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F071A67B41A00823AC5 /* UIView+LJ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,21 @@
 		C4BD1FC91A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSFunctionalityUsingDemosTests-Info.plist"; sourceTree = "<group>"; };
 		C4BD1FCB1A67B3BD00B1C242 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4BD1FCD1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFunctionalityUsingDemosTests.m; sourceTree = "<group>"; };
+		C4FE0EF51A67B41A00823AC5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C4FE0EF61A67B41A00823AC5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C4FE0EF91A67B41A00823AC5 /* CoreGraphicsDemoRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsDemoRootVC.h; sourceTree = "<group>"; };
+		C4FE0EFA1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsDemoRootVC.m; sourceTree = "<group>"; };
+		C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreGraphicsDemoRootVC.xib; sourceTree = "<group>"; };
+		C4FE0EFC1A67B41A00823AC5 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		C4FE0EFD1A67B41A00823AC5 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		C4FE0EFF1A67B41A00823AC5 /* UIDynamicRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDynamicRootVC.h; sourceTree = "<group>"; };
+		C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDynamicRootVC.m; sourceTree = "<group>"; };
+		C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIDynamicRootVC.xib; sourceTree = "<group>"; };
+		C4FE0F021A67B41A00823AC5 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		C4FE0F031A67B41A00823AC5 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		C4FE0F041A67B41A00823AC5 /* Menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Menu.xib; sourceTree = "<group>"; };
+		C4FE0F061A67B41A00823AC5 /* UIView+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LJ.h"; sourceTree = "<group>"; };
+		C4FE0F071A67B41A00823AC5 /* UIView+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +131,13 @@
 		C4BD1FAE1A67B3BD00B1C242 /* iOSFunctionalityUsingDemos */ = {
 			isa = PBXGroup;
 			children = (
+				C4FE0EF51A67B41A00823AC5 /* BaseViewController.h */,
+				C4FE0EF61A67B41A00823AC5 /* BaseViewController.m */,
+				C4FE0EF71A67B41A00823AC5 /* FunctionalityDemos */,
+				C4FE0F021A67B41A00823AC5 /* Menu.h */,
+				C4FE0F031A67B41A00823AC5 /* Menu.m */,
+				C4FE0F041A67B41A00823AC5 /* Menu.xib */,
+				C4FE0F051A67B41A00823AC5 /* Tools */,
 				C4BD1FB71A67B3BD00B1C242 /* AppDelegate.h */,
 				C4BD1FB81A67B3BD00B1C242 /* AppDelegate.m */,
 				C4BD1FBA1A67B3BD00B1C242 /* Images.xcassets */,
@@ -142,6 +173,46 @@
 				C4BD1FCA1A67B3BD00B1C242 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4FE0EF71A67B41A00823AC5 /* FunctionalityDemos */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE0EF81A67B41A00823AC5 /* CoreGraphicsDemo */,
+				C4FE0EFE1A67B41A00823AC5 /* UIDynamicDemo */,
+			);
+			path = FunctionalityDemos;
+			sourceTree = "<group>";
+		};
+		C4FE0EF81A67B41A00823AC5 /* CoreGraphicsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE0EF91A67B41A00823AC5 /* CoreGraphicsDemoRootVC.h */,
+				C4FE0EFA1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m */,
+				C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */,
+				C4FE0EFC1A67B41A00823AC5 /* MyView.h */,
+				C4FE0EFD1A67B41A00823AC5 /* MyView.m */,
+			);
+			path = CoreGraphicsDemo;
+			sourceTree = "<group>";
+		};
+		C4FE0EFE1A67B41A00823AC5 /* UIDynamicDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE0EFF1A67B41A00823AC5 /* UIDynamicRootVC.h */,
+				C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */,
+				C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */,
+			);
+			path = UIDynamicDemo;
+			sourceTree = "<group>";
+		};
+		C4FE0F051A67B41A00823AC5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE0F061A67B41A00823AC5 /* UIView+LJ.h */,
+				C4FE0F071A67B41A00823AC5 /* UIView+LJ.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FE0F0D1A67B41A00823AC5 /* UIDynamicRootVC.xib in Resources */,
+				C4FE0F0F1A67B41A00823AC5 /* Menu.xib in Resources */,
 				C4BD1FB31A67B3BD00B1C242 /* InfoPlist.strings in Resources */,
+				C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */,
 				C4BD1FBB1A67B3BD00B1C242 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
+				C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */,
+				C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */,
 				C4BD1FB51A67B3BD00B1C242 /* main.m in Sources */,
+				C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */,
+				C4FE0F0C1A67B41A00823AC5 /* UIDynamicRootVC.m in Sources */,
+				C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +519,7 @@
 				C4BD1FD31A67B3BD00B1C242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4BD1FD41A67B3BD00B1C242 /* Build configuration list for PBXNativeTarget "iOSFunctionalityUsingDemosTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +528,7 @@
 				C4BD1FD61A67B3BD00B1C242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
