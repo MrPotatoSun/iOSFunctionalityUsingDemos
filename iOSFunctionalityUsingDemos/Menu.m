@@ -8,7 +8,8 @@
 
 #import "Menu.h"
 #import "CoreGraphicsDemoRootVC.h"
-#import "UIDynamicRootVC.h"
+#import "DynamicRVC.h"
+
 @interface Menu ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbv;
 
@@ -45,7 +46,7 @@
         cgrvc.title = str;
         [self.navigationController pushViewController:cgrvc animated:YES];
     }else if ([str isEqualToString:@"UIDynamic Demo"]) {
-        UIDynamicRootVC * rvc = [[UIDynamicRootVC alloc]init];
+        DynamicRVC * rvc = [[DynamicRVC alloc]init];
         rvc.title = str;
         [self.navigationController pushViewController:rvc animated:YES];
     }

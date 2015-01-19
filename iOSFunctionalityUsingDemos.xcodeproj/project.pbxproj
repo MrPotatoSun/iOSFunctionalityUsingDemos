@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4B41A6CD6F000DA831A /* DynamicRVC.m */; };
+		C400F4B71A6CD6F000DA831A /* DynamicRVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C400F4B51A6CD6F000DA831A /* DynamicRVC.xib */; };
+		C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4BA1A6CF47B00DA831A /* MyBehavior.m */; };
 		C4BD1FA91A67B3BD00B1C242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */; };
 		C4BD1FAB1A67B3BD00B1C242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */; };
 		C4BD1FAD1A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
@@ -23,8 +26,6 @@
 		C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EFA1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m */; };
 		C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */; };
 		C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EFD1A67B41A00823AC5 /* MyView.m */; };
-		C4FE0F0C1A67B41A00823AC5 /* UIDynamicRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */; };
-		C4FE0F0D1A67B41A00823AC5 /* UIDynamicRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */; };
 		C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F031A67B41A00823AC5 /* Menu.m */; };
 		C4FE0F0F1A67B41A00823AC5 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0F041A67B41A00823AC5 /* Menu.xib */; };
 		C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0F071A67B41A00823AC5 /* UIView+LJ.m */; };
@@ -41,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C400F4B31A6CD6F000DA831A /* DynamicRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicRVC.h; sourceTree = "<group>"; };
+		C400F4B41A6CD6F000DA831A /* DynamicRVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicRVC.m; sourceTree = "<group>"; };
+		C400F4B51A6CD6F000DA831A /* DynamicRVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicRVC.xib; sourceTree = "<group>"; };
+		C400F4B81A6CE0C100DA831A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C400F4B91A6CF47B00DA831A /* MyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBehavior.h; sourceTree = "<group>"; };
+		C400F4BA1A6CF47B00DA831A /* MyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBehavior.m; sourceTree = "<group>"; };
 		C4BD1FA51A67B3BD00B1C242 /* iOSFunctionalityUsingDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFunctionalityUsingDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +71,6 @@
 		C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreGraphicsDemoRootVC.xib; sourceTree = "<group>"; };
 		C4FE0EFC1A67B41A00823AC5 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		C4FE0EFD1A67B41A00823AC5 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		C4FE0EFF1A67B41A00823AC5 /* UIDynamicRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDynamicRootVC.h; sourceTree = "<group>"; };
-		C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDynamicRootVC.m; sourceTree = "<group>"; };
-		C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIDynamicRootVC.xib; sourceTree = "<group>"; };
 		C4FE0F021A67B41A00823AC5 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		C4FE0F031A67B41A00823AC5 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		C4FE0F041A67B41A00823AC5 /* Menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Menu.xib; sourceTree = "<group>"; };
@@ -199,9 +203,11 @@
 		C4FE0EFE1A67B41A00823AC5 /* UIDynamicDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C4FE0EFF1A67B41A00823AC5 /* UIDynamicRootVC.h */,
-				C4FE0F001A67B41A00823AC5 /* UIDynamicRootVC.m */,
-				C4FE0F011A67B41A00823AC5 /* UIDynamicRootVC.xib */,
+				C400F4B31A6CD6F000DA831A /* DynamicRVC.h */,
+				C400F4B41A6CD6F000DA831A /* DynamicRVC.m */,
+				C400F4B51A6CD6F000DA831A /* DynamicRVC.xib */,
+				C400F4B91A6CF47B00DA831A /* MyBehavior.h */,
+				C400F4BA1A6CF47B00DA831A /* MyBehavior.m */,
 			);
 			path = UIDynamicDemo;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 		C4FE0F051A67B41A00823AC5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C400F4B81A6CE0C100DA831A /* Common.h */,
 				C4FE0F061A67B41A00823AC5 /* UIView+LJ.h */,
 				C4FE0F071A67B41A00823AC5 /* UIView+LJ.m */,
 			);
@@ -290,7 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FE0F0D1A67B41A00823AC5 /* UIDynamicRootVC.xib in Resources */,
+				C400F4B71A6CD6F000DA831A /* DynamicRVC.xib in Resources */,
 				C4FE0F0F1A67B41A00823AC5 /* Menu.xib in Resources */,
 				C4BD1FB31A67B3BD00B1C242 /* InfoPlist.strings in Resources */,
 				C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */,
@@ -314,12 +321,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
+				C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
 				C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */,
 				C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */,
 				C4BD1FB51A67B3BD00B1C242 /* main.m in Sources */,
+				C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */,
 				C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */,
-				C4FE0F0C1A67B41A00823AC5 /* UIDynamicRootVC.m in Sources */,
 				C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
