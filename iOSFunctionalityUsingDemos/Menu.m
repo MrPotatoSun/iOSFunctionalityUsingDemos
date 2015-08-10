@@ -9,7 +9,7 @@
 #import "Menu.h"
 #import "CoreGraphicsDemoRootVC.h"
 #import "DynamicRVC.h"
-
+#import "CoreDataTestVC.h"
 @interface Menu ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbv;
 
@@ -23,7 +23,11 @@
     [super viewDidLoad];
     self.title=@"iOS 各种功能演示DEMO";
     
-    _ds= @[@"Core Graphics Demo",@"UIDynamic Demo"];
+    _ds= @[@"Core Graphics Demo",@"UIDynamic Demo",@"CoreData Demo"];
+    
+    CoreDataTestVC * rvc = [[CoreDataTestVC alloc]init];
+
+    [self.navigationController pushViewController:rvc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -47,6 +51,10 @@
         [self.navigationController pushViewController:cgrvc animated:YES];
     }else if ([str isEqualToString:@"UIDynamic Demo"]) {
         DynamicRVC * rvc = [[DynamicRVC alloc]init];
+        rvc.title = str;
+        [self.navigationController pushViewController:rvc animated:YES];
+    }else if ([str isEqualToString:@"CoreData Demo"]) {
+        CoreDataTestVC * rvc = [[CoreDataTestVC alloc]init];
         rvc.title = str;
         [self.navigationController pushViewController:rvc animated:YES];
     }

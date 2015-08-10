@@ -10,6 +10,10 @@
 		C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4B41A6CD6F000DA831A /* DynamicRVC.m */; };
 		C400F4B71A6CD6F000DA831A /* DynamicRVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C400F4B51A6CD6F000DA831A /* DynamicRVC.xib */; };
 		C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4BA1A6CF47B00DA831A /* MyBehavior.m */; };
+		C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */; };
+		C457A3A41B78F265002F7E5C /* CoreDataTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */; };
+		C457A3A71B78F28D002F7E5C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A61B78F28D002F7E5C /* Student.m */; };
+		C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */; };
 		C4BD1FA91A67B3BD00B1C242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */; };
 		C4BD1FAB1A67B3BD00B1C242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */; };
 		C4BD1FAD1A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
@@ -48,6 +52,12 @@
 		C400F4B81A6CE0C100DA831A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		C400F4B91A6CF47B00DA831A /* MyBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBehavior.h; sourceTree = "<group>"; };
 		C400F4BA1A6CF47B00DA831A /* MyBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBehavior.m; sourceTree = "<group>"; };
+		C457A3A01B78F265002F7E5C /* CoreDataTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestVC.h; sourceTree = "<group>"; };
+		C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestVC.m; sourceTree = "<group>"; };
+		C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataTestVC.xib; sourceTree = "<group>"; };
+		C457A3A51B78F28D002F7E5C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		C457A3A61B78F28D002F7E5C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XXX.xcdatamodel; sourceTree = "<group>"; };
 		C4BD1FA51A67B3BD00B1C242 /* iOSFunctionalityUsingDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFunctionalityUsingDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,6 +112,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C457A39E1B78F237002F7E5C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */,
+				C457A3A51B78F28D002F7E5C /* Student.h */,
+				C457A3A61B78F28D002F7E5C /* Student.m */,
+				C457A39F1B78F246002F7E5C /* ViewControllers */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C457A39F1B78F246002F7E5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C457A3A01B78F265002F7E5C /* CoreDataTestVC.h */,
+				C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */,
+				C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C4BD1F9C1A67B3BD00B1C242 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +213,7 @@
 		C4FE0EF71A67B41A00823AC5 /* FunctionalityDemos */ = {
 			isa = PBXGroup;
 			children = (
+				C457A39E1B78F237002F7E5C /* CoreData */,
 				C4FE0EF81A67B41A00823AC5 /* CoreGraphicsDemo */,
 				C4FE0EFE1A67B41A00823AC5 /* UIDynamicDemo */,
 			);
@@ -302,6 +334,7 @@
 				C4BD1FB31A67B3BD00B1C242 /* InfoPlist.strings in Resources */,
 				C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */,
 				C4BD1FBB1A67B3BD00B1C242 /* Images.xcassets in Resources */,
+				C457A3A41B78F265002F7E5C /* CoreDataTestVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */,
+				C457A3A71B78F28D002F7E5C /* Student.m in Sources */,
 				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
 				C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
+				C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */,
 				C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */,
 				C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */,
 				C4BD1FB51A67B3BD00B1C242 /* main.m in Sources */,
@@ -539,6 +575,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */,
+			);
+			currentVersion = C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */;
+			path = XXX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C4BD1F9D1A67B3BD00B1C242 /* Project object */;
 }

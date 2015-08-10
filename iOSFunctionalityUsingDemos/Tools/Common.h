@@ -1,14 +1,22 @@
 #pragma mark --------------------------- 沙盒
+#define  kBundleIdentifier ([NSBundle mainBundle].bundleIdentifier)
 //沙盒 Documents 目录
 #define kDocumentsDir (NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0])
 //沙盒 Caches 目录
-#define kCachesDir (NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES)[0]);
+#define kCachesDir ((NSString *)(NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES)[0]))
 //沙盒 tmp 目录
-#define kTmpDir NSTemporaryDirectory();
+#define kTmpDir NSTemporaryDirectory()
 
 #define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 #pragma mark --------------------------- 设备尺寸
+
+#if TARGET_IPHONE_SIMULATOR
+#define kISSIMULATOR 1
+#elif TARGET_OS_IPHONE
+#define kISSIMULATOR 0
+#endif
+
 //获取屏幕 宽度、高度
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
@@ -34,11 +42,14 @@
 #define kIsRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kIsiPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kIsPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
+//判断是否为 Iphone6
+#define IS_IPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+//判断是否为 iPhone6 plus
+#define IS_IPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
 
 #pragma mark ---------------------------  图片相关
 //读取本地图片
-#define kLoadLocalImg(file) (([file rangeOfString:@"."].location!=NSNotFound)?[UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:nil]]:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:[file stringByAppendingString:@".png"] ofType:nil]])
+#define kLoadLocalImg(imgName) (([imgName rangeOfString:@"."].location!=NSNotFound)?[UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:imgName ofType:nil]]:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:[imgName stringByAppendingString:@".png"] ofType:nil]])
 
 #pragma mark --------------------------- 颜色相关
 //随机颜色
@@ -116,8 +127,8 @@ return _instance; \
 
 #define kSetBgImg \
 - (void) loadView{\
-    [super loadView];\
-    self.view.backgroundColor=kColor(242,242,242,1);\
+[super loadView];\
+self.view.backgroundColor=kColor(242,242,242,1);\
 }
 
 #define NEED_YOUHUA_LOG(s) NSLog(@"--->>该处性能需要优化,类：%@ line:%d 问题：%@",[self class],__LINE__,s)
