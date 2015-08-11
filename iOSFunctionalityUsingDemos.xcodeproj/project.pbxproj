@@ -12,8 +12,10 @@
 		C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4BA1A6CF47B00DA831A /* MyBehavior.m */; };
 		C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */; };
 		C457A3A41B78F265002F7E5C /* CoreDataTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */; };
-		C457A3A71B78F28D002F7E5C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A61B78F28D002F7E5C /* Student.m */; };
 		C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */; };
+		C4875D461B79962C00D15DC1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = C4875D451B79962C00D15DC1 /* Course.m */; };
+		C4875D491B79962D00D15DC1 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C4875D481B79962D00D15DC1 /* Student.m */; };
+		C4875D4C1B79962D00D15DC1 /* ClassRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C4875D4B1B79962D00D15DC1 /* ClassRoom.m */; };
 		C4BD1FA91A67B3BD00B1C242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */; };
 		C4BD1FAB1A67B3BD00B1C242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */; };
 		C4BD1FAD1A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
@@ -55,9 +57,13 @@
 		C457A3A01B78F265002F7E5C /* CoreDataTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestVC.h; sourceTree = "<group>"; };
 		C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestVC.m; sourceTree = "<group>"; };
 		C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataTestVC.xib; sourceTree = "<group>"; };
-		C457A3A51B78F28D002F7E5C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		C457A3A61B78F28D002F7E5C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XXX.xcdatamodel; sourceTree = "<group>"; };
+		C4875D441B79962C00D15DC1 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		C4875D451B79962C00D15DC1 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		C4875D471B79962D00D15DC1 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		C4875D481B79962D00D15DC1 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		C4875D4A1B79962D00D15DC1 /* ClassRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassRoom.h; sourceTree = "<group>"; };
+		C4875D4B1B79962D00D15DC1 /* ClassRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassRoom.m; sourceTree = "<group>"; };
 		C4BD1FA51A67B3BD00B1C242 /* iOSFunctionalityUsingDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFunctionalityUsingDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,9 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */,
-				C457A3A51B78F28D002F7E5C /* Student.h */,
-				C457A3A61B78F28D002F7E5C /* Student.m */,
 				C457A39F1B78F246002F7E5C /* ViewControllers */,
+				C4875D471B79962D00D15DC1 /* Student.h */,
+				C4875D481B79962D00D15DC1 /* Student.m */,
+				C4875D4A1B79962D00D15DC1 /* ClassRoom.h */,
+				C4875D4B1B79962D00D15DC1 /* ClassRoom.m */,
+				C4875D441B79962C00D15DC1 /* Course.h */,
+				C4875D451B79962C00D15DC1 /* Course.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -354,7 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */,
-				C457A3A71B78F28D002F7E5C /* Student.m in Sources */,
+				C4875D461B79962C00D15DC1 /* Course.m in Sources */,
+				C4875D491B79962D00D15DC1 /* Student.m in Sources */,
 				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
 				C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
@@ -365,6 +376,7 @@
 				C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */,
 				C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */,
 				C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */,
+				C4875D4C1B79962D00D15DC1 /* ClassRoom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

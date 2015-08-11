@@ -1,5 +1,5 @@
 //
-//  Student.h
+//  Course.h
 //  iOSFunctionalityUsingDemos
 //
 //  Created by 刘杰cjs on 15/8/11.
@@ -10,9 +10,8 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Student : NSManagedObject
+@interface Course : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * age;
 @property (nonatomic, retain) NSString * name;
 
 @end

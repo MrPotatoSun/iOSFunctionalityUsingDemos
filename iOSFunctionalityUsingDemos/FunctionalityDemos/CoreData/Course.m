@@ -1,17 +1,16 @@
 //
-//  Student.m
+//  Course.m
 //  iOSFunctionalityUsingDemos
 //
 //  Created by 刘杰cjs on 15/8/11.
 //  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
 //
 
-#import "Student.h"
+#import "Course.h"
 
 
-@implementation Student
+@implementation Course
 
-@dynamic age;
 @dynamic name;
 
 @end

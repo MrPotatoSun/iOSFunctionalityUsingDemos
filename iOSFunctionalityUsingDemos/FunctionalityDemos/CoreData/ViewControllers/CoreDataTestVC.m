@@ -21,24 +21,51 @@
     NSManagedObjectModel * managedObjectModel;
     NSManagedObjectContext * managedObjectContext;
     NSArray * _ds;
+    NSArray * _dsGroupNames;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
+    
+    
+    
+    NSString * group1Name = @"新增";
+    NSArray * gourp1 = @[
+                            @{
+                                @"text":@"插入",
+                                @"selectorString":@"insert"
+                            }
+                         ];
+    NSString * group2Name = @"查询";
+    NSArray * gourp2 = @[
+                         @{
+                             @"text":@"查询-所有数据",
+                             @"selectorString":@"searchAll"
+                             },
+                         @{
+                             @"text":@"创建查询模板",
+                             @"selectorString":@"createSearchTempleate"
+                             },
+                         @{
+                             @"text":@"获取并使用查询模板",
+                             @"selectorString":@"useSearchTempleate"
+                             }
+                         ];
+    NSString * group3Name = @"删除";
+    NSArray * gourp3 = @[
+                         @{
+                             @"text":@"删除-所有数据",
+                             @"selectorString":@"deleteAll"
+                             }
+                         ];
+    
     _ds = @[
-            @{
-                @"text":@"插入",
-                @"selectorString":@"insert"
-                },
-            @{
-                @"text":@"查询-所有数据",
-                @"selectorString":@"searchAll"
-                },
-            @{
-                @"text":@"删除-所有数据",
-                @"selectorString":@"deleteAll"
-                }
+            gourp1,
+            gourp2,
+            gourp3
             ];
+    _dsGroupNames = @[group1Name,group2Name,group3Name];
+    
     NSLog(@"%@",kDocumentsDir);
     _tbv.delegate = self;
     _tbv.dataSource = self;
@@ -92,14 +119,15 @@
         NSLog(@"保存失败 error:%@",err);
     }
 }
+#pragma mark ---------------------------------------- 新增 ----------------------------------------
 #pragma mark 插入
 - (void) insert{
     NSEntityDescription * entity = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:managedObjectContext];
     Student * stu = (Student *)entity;
-    stu.name = @"fe2wa";
+    stu.name = @"jerry";
     [self saveChanges];
 }
-#pragma mark 查询
+#pragma mark ---------------------------------------- 查询 ----------------------------------------
 - (NSArray *) searchAll{
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
     NSError * err;
@@ -119,6 +147,40 @@
     }
     return results;
 }
+#pragma mark 创建查询模板
+- (void) createSearchTempleate{
+    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Student" inManagedObjectContext:managedObjectContext];
+    //模板1 不带参数
+    NSFetchRequest  * fetchReqTemp = [[NSFetchRequest alloc]init];
+    [fetchReqTemp setEntity:entity];
+    [managedObjectModel setFetchRequestTemplate:fetchReqTemp forName:@"fetchAllStudentTemplate"];
+    NSLog(@"创建了一个 名称为 fetchAllStudentTemplate 的查询模板，用于查询所有 Student 的信息");
+    
+    //模板2 带参数
+    NSFetchRequest  * fetchReqTemp2 = [[NSFetchRequest alloc]init];
+    [fetchReqTemp2 setEntity:entity];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@" name == $NAME"];
+    [fetchReqTemp2 setPredicate:predicate];
+    [managedObjectModel setFetchRequestTemplate:fetchReqTemp2 forName:@"fetchReqTemp2"];
+    
+    NSLog(@"创建了一个 名称为 fetchReqTemp2 的查询模板，用于查询所有 指定 Student 的信息");
+}
+#pragma mark 获取并使用查询模板
+- (void) useSearchTempleate{
+    //获取无惨模板
+    NSFetchRequest * fetchReqTemp = [managedObjectModel fetchRequestTemplateForName:@"fetchAllStudentTemplate"];
+    NSArray * res = [managedObjectContext executeFetchRequest:fetchReqTemp error:nil];
+    NSLog(@"无参 查询结果：%@",res);
+    
+    //获取带参模板
+    NSFetchRequest * fetchReqTemp2 = [managedObjectModel fetchRequestFromTemplateWithName:@"fetchReqTemp2" substitutionVariables:@{
+                                                                                                                                   @"NAME":@"jerry"
+                                                                                                                                   } ];
+    NSArray * res2 = [managedObjectContext executeFetchRequest:fetchReqTemp2 error:nil];
+    NSLog(@"有参 查询结果：%@",res2);
+    
+}
+#pragma mark ---------------------------------------- 删除 ----------------------------------------
 #pragma mark 删除-所有
 - (void) deleteAll{
     NSArray * res = [self searchAll];
@@ -128,19 +190,30 @@
     [self saveChanges];
 }
 #pragma mark ---------------------------------------- 代理 ----------------------------------------
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return _dsGroupNames.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return _dsGroupNames[section];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _ds.count;
+    return ((NSArray *)_ds[section]).count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSDictionary * dic =  _ds[indexPath.row];
+    NSDictionary * dic =  ((NSArray *)_ds[indexPath.section])[indexPath.row];
+    
     NSString * text = dic[@"text"];
     cell.textLabel.text = text;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSDictionary * dic =  _ds[indexPath.row];
+    NSDictionary * dic =  ((NSArray *)_ds[indexPath.section])[indexPath.row];
+    
     NSString * selectorString = dic[@"selectorString"];
     SEL sel =  NSSelectorFromString(selectorString);
     [self performSelector:sel withObject:nil];
