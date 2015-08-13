@@ -9,6 +9,7 @@
 #import "CoreDataTestVC.h"
 #import <CoreData/CoreData.h>
 #import "Student.h"
+#import "City.h"
 #import "Common.h"
 @interface CoreDataTestVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbv;
@@ -34,7 +35,11 @@
                             @{
                                 @"text":@"插入",
                                 @"selectorString":@"insert"
-                            }
+                            },
+                            @{
+                                @"text":@"测试",
+                                @"selectorString":@"testgff"
+                                }
                          ];
     NSString * group2Name = @"查询";
     NSArray * gourp2 = @[
@@ -82,7 +87,6 @@
                                   initWithManagedObjectModel: [self managedObjectModel]];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                   configuration:nil URL:storeUrl options:nil error:&error]) {
-        // Handle error
     }
     return persistentStoreCoordinator;
 }
@@ -107,6 +111,32 @@
         [managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return managedObjectContext;
+}
+#pragma mark 测试
+- (void)testgff{
+    NSString * str = [NSString stringWithContentsOfFile:@"/Users/jerry/Desktop/城市信息.json" encoding:NSUTF8StringEncoding error:nil];
+    NSDictionary * cityConfigDic =  [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+    NSArray * groupCityDics = cityConfigDic[@"cityInfo"];
+    for (NSDictionary * groupCityDic in groupCityDics) {
+        NSString * groupName = groupCityDic[@"groupName"];
+        NSArray * cityDics = groupCityDic[@"members"];
+        for (NSDictionary * cityDic in cityDics) {
+            NSString * cityID = cityDic[@"city_id"];
+            NSString * cityName = cityDic[@"city_name"];
+            NSString * match = cityDic[@"Match"];
+            NSString * pinyin = cityDic[@"PinYin"];
+            
+            City  * cityInfo =  [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:managedObjectContext];
+            cityInfo.cityID = cityID;
+            cityInfo.cityName = cityName;
+            cityInfo.match = match;
+            cityInfo.pinyin = pinyin;
+            cityInfo.groupName = groupName;
+            
+            NSLog(@"f");
+        }
+    }
+    [managedObjectContext save:nil];
 }
 #pragma mark ---------------------------------------- demo 方法 ----------------------------------------
 #pragma mark 保存更改

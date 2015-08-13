@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="cityID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="match" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pinyin" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="ClassRoom" representedClassName="ClassRoom" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -14,8 +21,9 @@
         </fetchedProperty>
     </entity>
     <elements>
-        <element name="Student" positionX="-50564" positionY="-15274" width="128" height="101"/>
-        <element name="ClassRoom" positionX="-50562" positionY="-15246" width="128" height="60"/>
-        <element name="Course" positionX="-50553" positionY="-15237" width="128" height="60"/>
+        <element name="City" positionX="-51588" positionY="-15526" width="128" height="118"/>
+        <element name="ClassRoom" positionX="-50814" positionY="-15516" width="128" height="58"/>
+        <element name="Course" positionX="-50753" positionY="-15696" width="128" height="60"/>
+        <element name="Student" positionX="-51174" positionY="-15669" width="128" height="101"/>
     </elements>
 </model>

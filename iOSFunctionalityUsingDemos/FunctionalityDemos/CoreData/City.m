@@ -1,17 +1,20 @@
 //
-//  Student.m
+//  City.m
 //  iOSFunctionalityUsingDemos
 //
 //  Created by 刘杰cjs on 15/8/13.
 //  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
 //
 
-#import "Student.h"
+#import "City.h"
 
 
-@implementation Student
+@implementation City
 
-@dynamic age;
-@dynamic name;
+@dynamic cityID;
+@dynamic cityName;
+@dynamic match;
+@dynamic pinyin;
+@dynamic groupName;
 
 @end
