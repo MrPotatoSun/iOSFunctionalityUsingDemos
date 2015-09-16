@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="RSBed" representedClassName="RSBed" syncable="YES">
+        <relationship name="stu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSStudent" inverseName="bed" inverseEntity="RSStudent" syncable="YES"/>
+    </entity>
+    <entity name="RSClassRoom" representedClassName="RSClassRoom" syncable="YES">
+        <attribute name="roomName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSStudent" inverseName="classRoom" inverseEntity="RSStudent" syncable="YES"/>
+    </entity>
+    <entity name="RSStudent" representedClassName="RSStudent" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSBed" inverseName="stu" inverseEntity="RSBed" syncable="YES"/>
+        <relationship name="classRoom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSClassRoom" inverseName="stus" inverseEntity="RSClassRoom" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RSClassRoom" positionX="-45" positionY="0" width="128" height="73"/>
+        <element name="RSStudent" positionX="385" positionY="83" width="128" height="103"/>
+        <element name="RSBed" positionX="88" positionY="-94" width="128" height="58"/>
+    </elements>
+</model>

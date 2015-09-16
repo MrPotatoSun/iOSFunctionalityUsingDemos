@@ -54,6 +54,10 @@
                          @{
                              @"text":@"使用查询模板",
                              @"selectorString":@"userSearchTempleate"
+                             },
+                         @{
+                             @"text":@"查询指定的值",
+                             @"selectorString":@"specifySearch"
                              }
                          ];
     NSString * group3Name = @"删除";
@@ -149,6 +153,7 @@
     NSManagedObjectContext * managedObjectContext = [self managedObjectContextWithModelName:@"Model3"];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+
     NSError * err;
     NSArray * results = [managedObjectContext executeFetchRequest:request error:&err];
     if (err) {
@@ -158,11 +163,7 @@
     if (results.count<=0) {
         NSLog(@"查询无数据");
     }else{
-        NSLog(@"-------- 查询出来的所有数据 start start start ---------");
-        for (Student * stu in results) {
-            NSLog(@"name:%@ age:%@",stu.name,stu.age);
-        }
-        NSLog(@"-------- 查询出来的所有数据 end end end ---------");
+        NSLog(@"%@",results);
     }
     return results;
 }
@@ -178,7 +179,6 @@
     [fetchReqTemp setEntity:entity];
     [managedObjectModel setFetchRequestTemplate:fetchReqTemp forName:@"fetchAllStudentTemplate"];
     NSLog(@"创建了一个 名称为 fetchAllStudentTemplate 的查询模板，用于查询所有 Student 的信息");
-    
     //模板2 带参数
     NSFetchRequest  * fetchReqTemp2 = [[NSFetchRequest alloc]init];
     [fetchReqTemp2 setEntity:entity];
@@ -197,6 +197,38 @@
                                                                                                                                    } ];
     NSArray * res2 = [managedObjectContext executeFetchRequest:temp2 error:nil];
     NSLog(@"有参 查询结果：%@",res2);
+}
+#pragma mark 查询指定的值
+- (void) specifySearch{
+    NSManagedObjectContext * managedObjectContext = [self managedObjectContextWithModelName:@"Model3"];
+    //先插入一些测试数据
+    for (NSInteger i = 1; i<=10; i++) {
+        NSEntityDescription * entity = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:managedObjectContext];
+        Student * stu = (Student *)entity;
+        stu.name = [NSString stringWithFormat:@"name%d",i];
+        stu.age = @(i);
+    }
+    [self saveChangesForManagedObjectContext:managedObjectContext];
+    //指定那个属性
+    NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:@"age"];
+    //表达式
+    NSExpression *maxAgeExpression = [NSExpression expressionForFunction:@"max:"
+                                                                  arguments:[NSArray arrayWithObject:keyPathExpression]];
+    
+    
+    NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
+    
+    [expressionDescription setName:@"maxAge"];
+    
+    [expressionDescription setExpression:maxAgeExpression];
+    
+    [expressionDescription setExpressionResultType:NSInteger16AttributeType];
+    
+    NSFetchRequest  *request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
+    [request setResultType:NSDictionaryResultType];
+    [request setPropertiesToFetch:@[expressionDescription]];
+    NSArray * rs = [managedObjectContext executeFetchRequest:request error:nil];
+    NSLog(@"%@",rs);
 }
 #pragma mark ---------------------------------------- 删除 ----------------------------------------
 #pragma mark 删除-所有
@@ -224,8 +256,30 @@
 }
 
 
-
-
+#pragma mark ---------------------------------------- Relationship ----------------------------------------
+/*
+    https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/Articles/cdRelationships.html#//apple_ref/doc/uid/TP40001857-CJBDBHCB
+ 
+    1、to-many relationship 你可以定义一个upper and lower 区间，lower 不一定必须是0.
+    2、当一个关系是可选的并且定义了upper and lower 区间，要么该关系不存在，要么关系存在并且满足upper and lower 区间。
+    3、大多数关系是双向的，fetched property是个例外，fetched property 表示一个单向的弱关系。
+ 
+ 删除规则 
+    1、Deny ： 关系的 destination 只要有一个对象，那么 source 对象就不能被删除。例如：如果你要移除一个部门，你必须确保部门下所有的员工都已经被转移到其他部门或者被解雇。
+ 
+    2、Nullify ： 在 destination 对象中将 source 对象设置为 null。例如：如果你要移除一个部门，就把部门下所有员工的部门属性设置为 null。但是这只能在 部门 ---> 员工 这个关系是 optional
+                 情况下使用，或者你得确定在下次保存操作前将该部门下所有员工的部门属性设置为一个新的。
+ 
+    3、Cascade：删除 source 对象的同时 删除 destination 对象。例如：当你要移除一个部门的时候，将该部门所有员工解雇。
+    
+    4、No Action ： 不对 destination 对象做任何操作。例如：你移除了一个部门，但是你没管这个部门下的员工，那些员工甚至会认为他们还在那个部门中。
+ 
+    如果你使用了 No Action，你将可能会使 object graph 处于一个矛盾状态（员工和一个不存在的部门建立了关系）。此时就得靠你自己去维护  object graph 的一致性了。你要负责将 反向关系设置为一个有意义的值。比如：你有一个to-manay 的关系，然后 destination 处有很多对象。
+ 
+ 
+ Many-to-Many Relationships 关系：
+    你必须在两个方向上都定义 Many-to-Many 关系。
+ */
 
 
 
