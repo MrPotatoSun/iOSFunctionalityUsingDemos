@@ -12,11 +12,7 @@
 		C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = C400F4BA1A6CF47B00DA831A /* MyBehavior.m */; };
 		C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */; };
 		C457A3A41B78F265002F7E5C /* CoreDataTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */; };
-		C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */; };
-		C49528E31B7C6B7B0093F5AE /* ClassRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C49528E21B7C6B7B0093F5AE /* ClassRoom.m */; };
-		C49528E61B7C6B7B0093F5AE /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C49528E51B7C6B7B0093F5AE /* Student.m */; };
-		C49528E91B7C6B7C0093F5AE /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = C49528E81B7C6B7C0093F5AE /* Course.m */; };
-		C49528EC1B7C6B7C0093F5AE /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = C49528EB1B7C6B7C0093F5AE /* City.m */; };
+		C457A3AA1B78F292002F7E5C /* Model3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A81B78F292002F7E5C /* Model3.xcdatamodeld */; };
 		C4BD1FA91A67B3BD00B1C242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */; };
 		C4BD1FAB1A67B3BD00B1C242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */; };
 		C4BD1FAD1A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
@@ -29,6 +25,11 @@
 		C4BD1FC41A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
 		C4BD1FCC1A67B3BD00B1C242 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4BD1FCA1A67B3BD00B1C242 /* InfoPlist.strings */; };
 		C4BD1FCE1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BD1FCD1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m */; };
+		C4F9E10E1BA900BC00476CDB /* Model1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E10C1BA900BC00476CDB /* Model1.xcdatamodeld */; };
+		C4F9E1111BA9018200476CDB /* Model2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E10F1BA9018200476CDB /* Model2.xcdatamodeld */; };
+		C4F9E11C1BA9104400476CDB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E11B1BA9104400476CDB /* Student.m */; };
+		C4F9E1201BA914B700476CDB /* LocalizingTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E11E1BA914B700476CDB /* LocalizingTestModel.xcdatamodeld */; };
+		C4F9E1221BA914EA00476CDB /* LocalizingTestModelModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F9E1211BA914EA00476CDB /* LocalizingTestModelModel.strings */; };
 		C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EF61A67B41A00823AC5 /* BaseViewController.m */; };
 		C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE0EFA1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m */; };
 		C4FE0F0A1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FE0EFB1A67B41A00823AC5 /* CoreGraphicsDemoRootVC.xib */; };
@@ -58,15 +59,7 @@
 		C457A3A01B78F265002F7E5C /* CoreDataTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestVC.h; sourceTree = "<group>"; };
 		C457A3A11B78F265002F7E5C /* CoreDataTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestVC.m; sourceTree = "<group>"; };
 		C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataTestVC.xib; sourceTree = "<group>"; };
-		C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XXX.xcdatamodel; sourceTree = "<group>"; };
-		C49528E11B7C6B7B0093F5AE /* ClassRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassRoom.h; sourceTree = "<group>"; };
-		C49528E21B7C6B7B0093F5AE /* ClassRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassRoom.m; sourceTree = "<group>"; };
-		C49528E41B7C6B7B0093F5AE /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		C49528E51B7C6B7B0093F5AE /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
-		C49528E71B7C6B7C0093F5AE /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		C49528E81B7C6B7C0093F5AE /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		C49528EA1B7C6B7C0093F5AE /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		C49528EB1B7C6B7C0093F5AE /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		C457A3A91B78F292002F7E5C /* Model3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model3.xcdatamodel; sourceTree = "<group>"; };
 		C4BD1FA51A67B3BD00B1C242 /* iOSFunctionalityUsingDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFunctionalityUsingDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +76,13 @@
 		C4BD1FC91A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSFunctionalityUsingDemosTests-Info.plist"; sourceTree = "<group>"; };
 		C4BD1FCB1A67B3BD00B1C242 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4BD1FCD1A67B3BD00B1C242 /* iOSFunctionalityUsingDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFunctionalityUsingDemosTests.m; sourceTree = "<group>"; };
+		C4F9E10D1BA900BC00476CDB /* Model1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model1.xcdatamodel; sourceTree = "<group>"; };
+		C4F9E1101BA9018200476CDB /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
+		C4F9E1121BA9042100476CDB /* Model1_version2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model1_version2.xcdatamodel; sourceTree = "<group>"; };
+		C4F9E11A1BA9104400476CDB /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		C4F9E11B1BA9104400476CDB /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		C4F9E11F1BA914B700476CDB /* LocalizingTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalizingTestModel.xcdatamodel; sourceTree = "<group>"; };
+		C4F9E1211BA914EA00476CDB /* LocalizingTestModelModel.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalizingTestModelModel.strings; sourceTree = "<group>"; };
 		C4FE0EF51A67B41A00823AC5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		C4FE0EF61A67B41A00823AC5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C4FE0EF91A67B41A00823AC5 /* CoreGraphicsDemoRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsDemoRootVC.h; sourceTree = "<group>"; };
@@ -124,15 +124,9 @@
 		C457A39E1B78F237002F7E5C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */,
-				C49528EA1B7C6B7C0093F5AE /* City.h */,
-				C49528EB1B7C6B7C0093F5AE /* City.m */,
-				C49528E71B7C6B7C0093F5AE /* Course.h */,
-				C49528E81B7C6B7C0093F5AE /* Course.m */,
-				C49528E41B7C6B7B0093F5AE /* Student.h */,
-				C49528E51B7C6B7B0093F5AE /* Student.m */,
-				C49528E11B7C6B7B0093F5AE /* ClassRoom.h */,
-				C49528E21B7C6B7B0093F5AE /* ClassRoom.m */,
+				C4F9E11D1BA9149D00476CDB /* Localizing a Managed Object Model */,
+				C4F9E1191BA90EF700476CDB /* 新增 查询 删除 */,
+				C4F9E10B1BA9009200476CDB /* 加载 Data Model 示例 */,
 				C457A39F1B78F246002F7E5C /* ViewControllers */,
 			);
 			path = CoreData;
@@ -223,6 +217,34 @@
 				C4BD1FCA1A67B3BD00B1C242 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4F9E10B1BA9009200476CDB /* 加载 Data Model 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				C4F9E10C1BA900BC00476CDB /* Model1.xcdatamodeld */,
+				C4F9E10F1BA9018200476CDB /* Model2.xcdatamodeld */,
+			);
+			name = "加载 Data Model 示例";
+			sourceTree = "<group>";
+		};
+		C4F9E1191BA90EF700476CDB /* 新增 查询 删除 */ = {
+			isa = PBXGroup;
+			children = (
+				C457A3A81B78F292002F7E5C /* Model3.xcdatamodeld */,
+				C4F9E11A1BA9104400476CDB /* Student.h */,
+				C4F9E11B1BA9104400476CDB /* Student.m */,
+			);
+			name = "新增 查询 删除";
+			sourceTree = "<group>";
+		};
+		C4F9E11D1BA9149D00476CDB /* Localizing a Managed Object Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4F9E11E1BA914B700476CDB /* LocalizingTestModel.xcdatamodeld */,
+				C4F9E1211BA914EA00476CDB /* LocalizingTestModelModel.strings */,
+			);
+			name = "Localizing a Managed Object Model";
 			sourceTree = "<group>";
 		};
 		C4FE0EF71A67B41A00823AC5 /* FunctionalityDemos */ = {
@@ -344,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F9E1221BA914EA00476CDB /* LocalizingTestModelModel.strings in Resources */,
 				C400F4B71A6CD6F000DA831A /* DynamicRVC.xib in Resources */,
 				C4FE0F0F1A67B41A00823AC5 /* Menu.xib in Resources */,
 				C4BD1FB31A67B3BD00B1C242 /* InfoPlist.strings in Resources */,
@@ -368,19 +391,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49528E91B7C6B7C0093F5AE /* Course.m in Sources */,
-				C457A3AA1B78F292002F7E5C /* XXX.xcdatamodeld in Sources */,
+				C457A3AA1B78F292002F7E5C /* Model3.xcdatamodeld in Sources */,
 				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
-				C49528E61B7C6B7B0093F5AE /* Student.m in Sources */,
 				C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */,
-				C49528EC1B7C6B7C0093F5AE /* City.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
+				C4F9E1201BA914B700476CDB /* LocalizingTestModel.xcdatamodeld in Sources */,
 				C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */,
 				C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */,
 				C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */,
+				C4F9E1111BA9018200476CDB /* Model2.xcdatamodeld in Sources */,
 				C4BD1FB51A67B3BD00B1C242 /* main.m in Sources */,
 				C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */,
-				C49528E31B7C6B7B0093F5AE /* ClassRoom.m in Sources */,
+				C4F9E10E1BA900BC00476CDB /* Model1.xcdatamodeld in Sources */,
+				C4F9E11C1BA9104400476CDB /* Student.m in Sources */,
 				C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */,
 				C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */,
 			);
@@ -595,13 +618,44 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C457A3A81B78F292002F7E5C /* XXX.xcdatamodeld */ = {
+		C457A3A81B78F292002F7E5C /* Model3.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */,
+				C457A3A91B78F292002F7E5C /* Model3.xcdatamodel */,
 			);
-			currentVersion = C457A3A91B78F292002F7E5C /* XXX.xcdatamodel */;
-			path = XXX.xcdatamodeld;
+			currentVersion = C457A3A91B78F292002F7E5C /* Model3.xcdatamodel */;
+			path = Model3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C4F9E10C1BA900BC00476CDB /* Model1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4F9E1121BA9042100476CDB /* Model1_version2.xcdatamodel */,
+				C4F9E10D1BA900BC00476CDB /* Model1.xcdatamodel */,
+			);
+			currentVersion = C4F9E10D1BA900BC00476CDB /* Model1.xcdatamodel */;
+			path = Model1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C4F9E10F1BA9018200476CDB /* Model2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4F9E1101BA9018200476CDB /* Model2.xcdatamodel */,
+			);
+			currentVersion = C4F9E1101BA9018200476CDB /* Model2.xcdatamodel */;
+			path = Model2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C4F9E11E1BA914B700476CDB /* LocalizingTestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4F9E11F1BA914B700476CDB /* LocalizingTestModel.xcdatamodel */,
+			);
+			currentVersion = C4F9E11F1BA914B700476CDB /* LocalizingTestModel.xcdatamodel */;
+			path = LocalizingTestModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

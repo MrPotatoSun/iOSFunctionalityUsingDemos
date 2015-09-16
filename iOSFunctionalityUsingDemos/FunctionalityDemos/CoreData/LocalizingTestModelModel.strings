@@ -1,0 +1,12 @@
+/* 
+  LocalizingTestModelModel.strings
+  iOSFunctionalityUsingDemos
+
+  Created by 刘杰 on 15/9/16.
+  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
+*/
+"Entity/TestEntity" = "测试实体1";
+
+"Property/name" = "名称";
+
+"Property/age" = "年龄";
