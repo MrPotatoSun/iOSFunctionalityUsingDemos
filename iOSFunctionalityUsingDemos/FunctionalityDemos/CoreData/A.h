@@ -1,5 +1,5 @@
 //
-//  RSBed.h
+//  A.h
 //  iOSFunctionalityUsingDemos
 //
 //  Created by 刘杰 on 15/9/17.
@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Entity.h"
 
-@class RSStudent;
+@class B;
 
-@interface RSBed : NSManagedObject
+@interface A : Entity
 
-@property (nonatomic, retain) RSStudent *stu;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) B *b;
 
 @end

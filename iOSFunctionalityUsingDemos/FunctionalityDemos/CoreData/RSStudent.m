@@ -2,7 +2,7 @@
 //  RSStudent.m
 //  iOSFunctionalityUsingDemos
 //
-//  Created by 刘杰 on 15/9/16.
+//  Created by 刘杰 on 15/9/17.
 //  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 @implementation RSStudent
 
-@dynamic name;
 @dynamic age;
-@dynamic classRoom;
+@dynamic name;
 @dynamic bed;
+@dynamic classRoom;
 
 @end

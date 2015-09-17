@@ -2,7 +2,7 @@
 //  RSStudent.h
 //  iOSFunctionalityUsingDemos
 //
-//  Created by 刘杰 on 15/9/16.
+//  Created by 刘杰 on 15/9/17.
 //  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 @interface RSStudent : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * age;
-@property (nonatomic, retain) RSClassRoom *classRoom;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) RSBed *bed;
+@property (nonatomic, retain) RSClassRoom *classRoom;
 
 @end

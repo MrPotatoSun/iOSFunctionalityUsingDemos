@@ -9,6 +9,8 @@
 #import "CoreDataTestVC.h"
 #import <CoreData/CoreData.h>
 #import "Student.h"
+#import "A.h"
+#import "B.h"
 #import "Common.h"
 @interface CoreDataTestVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbv;
@@ -76,14 +78,23 @@
                              }
                          ];
     
+    NSString * group5Name = @"relationShip";
+    NSArray * gourp5 = @[
+                         @{
+                             @"text":@"添加",
+                             @"selectorString":@"rsAdd"
+                             }
+                         ];
+    
     _ds = @[
             gourp0,
             gourp1,
             gourp2,
             gourp3,
-            gourp4
+            gourp4,
+            gourp5
             ];
-    _dsGroupNames = @[group0Name,group1Name,group2Name,group3Name,group4Name];
+    _dsGroupNames = @[group0Name,group1Name,group2Name,group3Name,group4Name,group5Name];
     
     NSLog(@"%@",kDocumentsDir);
     _tbv.delegate = self;
@@ -279,8 +290,28 @@
  
  Many-to-Many Relationships 关系：
     你必须在两个方向上都定义 Many-to-Many 关系。
+ 
+ 关于Core Data 启动初始化：
+    参考：https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/IntegratingCoreData.html#//apple_ref/doc/uid/TP40001075-CH9-SW1
+    将  persistent store 加入到 persistent store coordinator的操作放在子线程中进行。
+    在 AppDelegate 中hold 一个 dataController ， 这个 dataController 负责 CoreData 的初始化，这样可以把CoreData 相关代码抽离出来。
  */
-
+- (void) rsAdd{
+    NSManagedObjectContext * managedObjectContext = [self managedObjectContextWithModelName:@"RelationShipTest"];
+    NSManagedObjectModel * managedObjectModel = [self managedObjectModelWithModelName:@"RelationShipTest"];
+    
+//    NSEntityDescription * entity = [NSEntityDescription insertNewObjectForEntityForName:@"A" inManagedObjectContext:managedObjectContext];
+//    A * a = (A *)entity;
+//
+//    B * b = (B *)[NSEntityDescription insertNewObjectForEntityForName:@"B" inManagedObjectContext:managedObjectContext];
+//    a.b = b;
+//    
+//    [managedObjectContext save:nil];
+    for (B * b in [self fetchAllEntityWithContext:managedObjectContext entityName:@"B"]) {
+        NSLog(@"%@",b.a);
+    }
+    
+}
 
 
 
@@ -326,6 +357,12 @@
     [self performSelector:sel withObject:nil];
 }
 #pragma mark ----- helper -------
+- (NSArray * ) fetchAllEntityWithContext:(NSManagedObjectContext *)context entityName:(NSString *)entityName{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:entityName];
+    NSError * err;
+    NSArray * results = [context executeFetchRequest:request error:&err];
+    return results;
+}
 -(NSManagedObjectContext *)managedObjectContextWithModelName:(NSString * ) modelName
 {
 

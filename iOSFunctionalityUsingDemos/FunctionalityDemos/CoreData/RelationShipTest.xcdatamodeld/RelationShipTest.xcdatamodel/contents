@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="A" representedClassName="A" parentEntity="Entity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="b" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="B" inverseName="a" inverseEntity="B" syncable="YES"/>
+    </entity>
+    <entity name="B" representedClassName="B" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="a" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="A" inverseName="b" inverseEntity="A" syncable="YES"/>
+    </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES">
+        <attribute name="xxx" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="RSBed" representedClassName="RSBed" syncable="YES">
         <relationship name="stu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSStudent" inverseName="bed" inverseEntity="RSStudent" syncable="YES"/>
     </entity>
@@ -14,8 +25,11 @@
         <relationship name="classRoom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSClassRoom" inverseName="stus" inverseEntity="RSClassRoom" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RSClassRoom" positionX="-45" positionY="0" width="128" height="73"/>
-        <element name="RSStudent" positionX="385" positionY="83" width="128" height="103"/>
         <element name="RSBed" positionX="88" positionY="-94" width="128" height="58"/>
+        <element name="RSClassRoom" positionX="-45" positionY="0" width="128" height="73"/>
+        <element name="RSStudent" positionX="421" positionY="-36" width="128" height="103"/>
+        <element name="A" positionX="277" positionY="261" width="128" height="73"/>
+        <element name="B" positionX="-126" positionY="267" width="128" height="73"/>
+        <element name="Entity" positionX="72" positionY="126" width="128" height="58"/>
     </elements>
 </model>

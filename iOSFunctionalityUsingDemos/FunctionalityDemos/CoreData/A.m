@@ -1,17 +1,18 @@
 //
-//  RSBed.m
+//  A.m
 //  iOSFunctionalityUsingDemos
 //
 //  Created by 刘杰 on 15/9/17.
 //  Copyright (c) 2015年 com.cjs.ljc. All rights reserved.
 //
 
-#import "RSBed.h"
-#import "RSStudent.h"
+#import "A.h"
+#import "B.h"
 
 
-@implementation RSBed
+@implementation A
 
-@dynamic stu;
+@dynamic name;
+@dynamic b;
 
 @end

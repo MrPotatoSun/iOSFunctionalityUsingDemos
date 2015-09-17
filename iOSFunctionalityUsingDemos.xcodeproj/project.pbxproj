@@ -14,9 +14,12 @@
 		C457A3A41B78F265002F7E5C /* CoreDataTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */; };
 		C457A3AA1B78F292002F7E5C /* Model3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457A3A81B78F292002F7E5C /* Model3.xcdatamodeld */; };
 		C47B1FF41BA9718B00887229 /* RelationShipTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C47B1FF21BA9718B00887229 /* RelationShipTest.xcdatamodeld */; };
-		C47B200F1BA994FD00887229 /* RSClassRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C47B200E1BA994FD00887229 /* RSClassRoom.m */; };
-		C47B20121BA994FE00887229 /* RSBed.m in Sources */ = {isa = PBXBuildFile; fileRef = C47B20111BA994FE00887229 /* RSBed.m */; };
-		C47B20151BA994FE00887229 /* RSStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = C47B20141BA994FE00887229 /* RSStudent.m */; };
+		C496A86F1BAA6546009D224E /* RSBed.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A86E1BAA6546009D224E /* RSBed.m */; };
+		C496A8721BAA6547009D224E /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A8711BAA6547009D224E /* B.m */; };
+		C496A8751BAA6547009D224E /* RSStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A8741BAA6547009D224E /* RSStudent.m */; };
+		C496A8781BAA6547009D224E /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A8771BAA6547009D224E /* A.m */; };
+		C496A87B1BAA6547009D224E /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A87A1BAA6547009D224E /* Entity.m */; };
+		C496A87E1BAA6547009D224E /* RSClassRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C496A87D1BAA6547009D224E /* RSClassRoom.m */; };
 		C4BD1FA91A67B3BD00B1C242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */; };
 		C4BD1FAB1A67B3BD00B1C242 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */; };
 		C4BD1FAD1A67B3BD00B1C242 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BD1FAC1A67B3BD00B1C242 /* UIKit.framework */; };
@@ -65,12 +68,18 @@
 		C457A3A21B78F265002F7E5C /* CoreDataTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataTestVC.xib; sourceTree = "<group>"; };
 		C457A3A91B78F292002F7E5C /* Model3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model3.xcdatamodel; sourceTree = "<group>"; };
 		C47B1FF31BA9718B00887229 /* RelationShipTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RelationShipTest.xcdatamodel; sourceTree = "<group>"; };
-		C47B200D1BA994FD00887229 /* RSClassRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSClassRoom.h; sourceTree = "<group>"; };
-		C47B200E1BA994FD00887229 /* RSClassRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSClassRoom.m; sourceTree = "<group>"; };
-		C47B20101BA994FE00887229 /* RSBed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBed.h; sourceTree = "<group>"; };
-		C47B20111BA994FE00887229 /* RSBed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBed.m; sourceTree = "<group>"; };
-		C47B20131BA994FE00887229 /* RSStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStudent.h; sourceTree = "<group>"; };
-		C47B20141BA994FE00887229 /* RSStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStudent.m; sourceTree = "<group>"; };
+		C496A86D1BAA6546009D224E /* RSBed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBed.h; sourceTree = "<group>"; };
+		C496A86E1BAA6546009D224E /* RSBed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBed.m; sourceTree = "<group>"; };
+		C496A8701BAA6547009D224E /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
+		C496A8711BAA6547009D224E /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
+		C496A8731BAA6547009D224E /* RSStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStudent.h; sourceTree = "<group>"; };
+		C496A8741BAA6547009D224E /* RSStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStudent.m; sourceTree = "<group>"; };
+		C496A8761BAA6547009D224E /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		C496A8771BAA6547009D224E /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		C496A8791BAA6547009D224E /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		C496A87A1BAA6547009D224E /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		C496A87C1BAA6547009D224E /* RSClassRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSClassRoom.h; sourceTree = "<group>"; };
+		C496A87D1BAA6547009D224E /* RSClassRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSClassRoom.m; sourceTree = "<group>"; };
 		C4BD1FA51A67B3BD00B1C242 /* iOSFunctionalityUsingDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFunctionalityUsingDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BD1FA81A67B3BD00B1C242 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BD1FAA1A67B3BD00B1C242 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,12 +167,18 @@
 			isa = PBXGroup;
 			children = (
 				C47B1FF21BA9718B00887229 /* RelationShipTest.xcdatamodeld */,
-				C47B200D1BA994FD00887229 /* RSClassRoom.h */,
-				C47B200E1BA994FD00887229 /* RSClassRoom.m */,
-				C47B20131BA994FE00887229 /* RSStudent.h */,
-				C47B20141BA994FE00887229 /* RSStudent.m */,
-				C47B20101BA994FE00887229 /* RSBed.h */,
-				C47B20111BA994FE00887229 /* RSBed.m */,
+				C496A86D1BAA6546009D224E /* RSBed.h */,
+				C496A86E1BAA6546009D224E /* RSBed.m */,
+				C496A8701BAA6547009D224E /* B.h */,
+				C496A8711BAA6547009D224E /* B.m */,
+				C496A8731BAA6547009D224E /* RSStudent.h */,
+				C496A8741BAA6547009D224E /* RSStudent.m */,
+				C496A8761BAA6547009D224E /* A.h */,
+				C496A8771BAA6547009D224E /* A.m */,
+				C496A8791BAA6547009D224E /* Entity.h */,
+				C496A87A1BAA6547009D224E /* Entity.m */,
+				C496A87C1BAA6547009D224E /* RSClassRoom.h */,
+				C496A87D1BAA6547009D224E /* RSClassRoom.m */,
 			);
 			name = RelationShip;
 			sourceTree = "<group>";
@@ -417,24 +432,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C496A87E1BAA6547009D224E /* RSClassRoom.m in Sources */,
 				C457A3AA1B78F292002F7E5C /* Model3.xcdatamodeld in Sources */,
 				C4FE0F101A67B41A00823AC5 /* UIView+LJ.m in Sources */,
-				C47B20121BA994FE00887229 /* RSBed.m in Sources */,
 				C400F4B61A6CD6F000DA831A /* DynamicRVC.m in Sources */,
 				C4BD1FB91A67B3BD00B1C242 /* AppDelegate.m in Sources */,
-				C47B200F1BA994FD00887229 /* RSClassRoom.m in Sources */,
 				C4F9E1201BA914B700476CDB /* LocalizingTestModel.xcdatamodeld in Sources */,
 				C457A3A31B78F265002F7E5C /* CoreDataTestVC.m in Sources */,
 				C4FE0F0E1A67B41A00823AC5 /* Menu.m in Sources */,
+				C496A86F1BAA6546009D224E /* RSBed.m in Sources */,
 				C47B1FF41BA9718B00887229 /* RelationShipTest.xcdatamodeld in Sources */,
 				C4FE0F081A67B41A00823AC5 /* BaseViewController.m in Sources */,
+				C496A87B1BAA6547009D224E /* Entity.m in Sources */,
 				C4F9E1111BA9018200476CDB /* Model2.xcdatamodeld in Sources */,
 				C4BD1FB51A67B3BD00B1C242 /* main.m in Sources */,
 				C400F4BB1A6CF47B00DA831A /* MyBehavior.m in Sources */,
 				C4F9E10E1BA900BC00476CDB /* Model1.xcdatamodeld in Sources */,
 				C4F9E11C1BA9104400476CDB /* Student.m in Sources */,
-				C47B20151BA994FE00887229 /* RSStudent.m in Sources */,
+				C496A8751BAA6547009D224E /* RSStudent.m in Sources */,
 				C4FE0F091A67B41A00823AC5 /* CoreGraphicsDemoRootVC.m in Sources */,
+				C496A8781BAA6547009D224E /* A.m in Sources */,
+				C496A8721BAA6547009D224E /* B.m in Sources */,
 				C4FE0F0B1A67B41A00823AC5 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
